@@ -1,0 +1,20 @@
+{
+  "mode": "All",
+  "policyRule": {
+    "if": {
+      "allOf": [
+        {
+          "field": "location",
+          "exists": "true"
+        },
+        {
+          "field": "location",
+          "notEquals": "westus3"
+        }
+      ]
+    },
+    "then": {
+      "effect": "deny"
+    }
+  }
+}
